@@ -1,0 +1,23 @@
+<%- include('../components/header.ejs') %>
+
+<div class="card my-3">
+	<div class="card-body">
+		<form action="/ideal/<%=ideal._id%>?_method=PUT" method="POST">
+			<div class="mb-3">
+				<label for="name" class="form-label">Nama Anda</label>
+				<input type="text" class="form-control" name="name" id="name" placeholder="Masukan Nama Anda" value="<%=ideal.name%>">
+			</div>
+			<div class="mb-3">
+				<label for="tinggi" class="form-label">Tinggi Anda</label>
+				<input type="number" class="form-control" name="height" id="tinggi" placeholder="Masukan Tinggi Anda" value="<%=ideal.height%>">
+			</div>
+			<div class="mb-3">
+				<label for="berat" class="form-label">Berat Anda</label>
+				<input type="text" class="form-control" name="weight" id="berat" placeholder="Masukan Berat Anda" value="<%=ideal.weight%>">
+			</div>
+			<button type="submit" class="btn btn-primary">Ubah</button>
+		</form>
+	</div>
+</div>
+
+<%- include('../components/footer.ejs') %>

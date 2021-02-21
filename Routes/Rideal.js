@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const idealController = require('../Controllers/Cideal')
 
-router.route('ideal')
+router.route('/ideal')
 		.get(idealController.index)
 		.post(idealController.store)
 

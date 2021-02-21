@@ -21,6 +21,10 @@ app.set('view engine','ejs')
 
 app.use(methodOverride('_method'))
 
+app.get('/',(req,res) => {
+	res.render('index')
+})
+
 app.use(idealRouter)
 
 app.listen(port, () => {

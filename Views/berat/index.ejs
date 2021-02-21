@@ -1,0 +1,23 @@
+<%- include('../components/header.ejs') %>
+
+<div class="card my-3">
+	<div class="card-header">
+		<a href="/ideal/create" class="btn btn-primary">Tambah Data</a>
+	</div>
+	<div class="card-body">
+		<ul class="list-group" style="width: 20%;">
+				<% if(berat.length > 0) {%>
+					<% berat.forEach((b)=>{%>
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<%= b.name %>
+							<a href="/ideal/<%= b._id %>" class="btn btn-info text-white">Show</a>
+						</li>
+						<%})%>
+				<%}else{%>
+					<li class="list-group-item d-flex justify-content-between align-items-center">Tidak Ada Data</li>
+				<%}%>
+		</ul>
+	</div>
+</div>
+
+<%- include('../components/footer.ejs') %>
